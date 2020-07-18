@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-securing-your-github-pages-site-with-https" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/17/securing-your-github-pages-site-with-https/" class="article-date">
+  <time datetime="2020-07-18T03:44:09.000Z" itemprop="datePublished">2020-07-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/17/securing-your-github-pages-site-with-https/">使用 HTTPS 保护 GitHub Pages 站点</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>HTTPS 增加一层加密，用于防止其他人窥探或篡改您的站点的流量。 您可对 GitHub Pages 站点强制实施 HTTPS，从而将所有 HTTP 请求透明地重定向到 HTTPS。</p>
+<p>拥有仓库管理员权限的人可对 GitHub Pages 站点实施 HTTPS。</p>
+<h3 id="关于-HTTPS-和-GitHub-Pages"><a href="#关于-HTTPS-和-GitHub-Pages" class="headerlink" title="关于 HTTPS 和 GitHub Pages"></a><a href="https://docs.github.com/cn/github/working-with-github-pages/securing-your-github-pages-site-with-https#" target="_blank" rel="noopener">关于 HTTPS 和 GitHub Pages</a></h3><p>所有 GitHub Pages 站点（包括使用自定义域正确配置的站点）均支持 HTTPS 和 HTTPS 强制实施。 有关自定义域的更多信息，请参阅“<a href="https://docs.github.com/cn/articles/about-custom-domains-and-github-pages" target="_blank" rel="noopener">关于自定义域和 GitHub Pages</a>”以及“<a href="https://docs.github.com/cn/articles/troubleshooting-custom-domains-and-github-pages#https-errors" target="_blank" rel="noopener">自定义域和 GitHub Pages 疑难解答</a>”。</p>
+<p>对于使用 2016 年 1 月 15 日后创建的 <code>github.io</code> 域的 GitHub Pages 站点，需要强制实施 HTTPS。 如果您在 2016 年 6 月 15 日之前创建了站点，则可以手动启用实施 HTTPS。</p>
+<p>GitHub Pages 站点不应该用于敏感事务，例如发送密码或信用卡号码。</p>
+<p>  <strong>警告</strong>：GitHub Pages则站点将成为互联网上的公开内容，即使其仓库是私有的或内部的。 如果站点的仓库中有敏感数据，您可能想要在发布前删除它。 更多信息请参阅“<a href="https://docs.github.com/cn/github/creating-cloning-and-archiving-repositories/about-repository-visibility" target="_blank" rel="noopener">关于仓库可见性</a>”。</p>
+<h3 id="对您的-GitHub-Pages-站点强制实施-HTTPS"><a href="#对您的-GitHub-Pages-站点强制实施-HTTPS" class="headerlink" title="对您的 GitHub Pages 站点强制实施 HTTPS"></a><a href="https://docs.github.com/cn/github/working-with-github-pages/securing-your-github-pages-site-with-https#" target="_blank" rel="noopener">对您的 GitHub Pages 站点强制实施 HTTPS</a></h3><ol>
+<li><p>在 GitHub 上，导航到站点的仓库。</p>
+</li>
+<li><p>在仓库名称下，单击 </p>
+</li>
+<li><p>Settings（设置）</p>
+<p>。 </p>
+<p><img src="https://docs.github.com/assets/images/help/repository/repo-actions-settings.png" alt="仓库设置按钮"></p>
+</li>
+<li><p>在 “GitHub Pages” 下，选择 </p>
+<p>Enforce HTTPS（实施 HTTPS）</p>
+<p>。 </p>
+<p><img src="https://docs.github.com/assets/images/help/pages/enforce-https-checkbox.png" alt="强制实施 HTTPS 复选框"></p>
+</li>
+</ol>
+<h3 id="解决具有混合内容的问题"><a href="#解决具有混合内容的问题" class="headerlink" title="解决具有混合内容的问题"></a><a href="https://docs.github.com/cn/github/working-with-github-pages/securing-your-github-pages-site-with-https#resolving-problems-with-mixed-content" target="_blank" rel="noopener">解决具有混合内容的问题</a></h3><p>如果您对 GitHub Pages 站点启用了 HTTPS，但站点的 HTML 仍通过 HTTP 引用图像、CSS 或 JavaScript，则您的站点将提供<em>混合内容</em>。 提供混合内容可能会降低站点的安全性，并导致在加载资产时出现问题。</p>
+<p>要删除站点的混合内容，请在站点的 HTML 中将 <code>http://</code> 更改为 <code>https://</code>，确保所有资产都通过 HTTPS 提供。</p>
+<p>资产通常位于以下位置：</p>
+<ul>
+<li>如果您的站点使用 Jekyll，则 HTML 文件可能位于 <em>_layouts</em> 文件夹中。</li>
+<li>CSS 通常位于 HTML 文件的 <code>&lt;head&gt;</code> 部分。</li>
+<li>JavaScript 通常位于 <code>&lt;head&gt;</code> 部分或结束 <code>&lt;/body&gt;</code> 标记之前。</li>
+<li>图像通常位于 <code>&lt;body&gt;</code> 部分。</li>
+</ul>
+<p><strong>提示：</strong>如果您在站点的源文件中找不到您的资产，请尝试在文本编辑器或 GitHub 上搜索站点源文件中的 <code>http</code>。</p>
+<h4 id="HTML-文件中引用的资产示例"><a href="#HTML-文件中引用的资产示例" class="headerlink" title="HTML 文件中引用的资产示例"></a><a href="https://docs.github.com/cn/github/working-with-github-pages/securing-your-github-pages-site-with-https#examples-of-assets-referenced-in-an-html-file" target="_blank" rel="noopener">HTML 文件中引用的资产示例</a></h4><table>
+<thead>
+<tr>
+<th>前端资源类型</th>
+<th>HTTP</th>
+<th>HTTPS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CSS</td>
+<td><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;http://example.com/css/main.css&quot;&gt;</code></td>
+<td><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://example.com/css/main.css&quot;&gt;</code></td>
+</tr>
+<tr>
+<td>JavaScript</td>
+<td><code>&lt;script type=&quot;text/javascript&quot; src=&quot;http://example.com/js/main.js&quot;&gt;&lt;/script&gt;</code></td>
+<td><code>&lt;script type=&quot;text/javascript&quot; src=&quot;https://example.com/js/main.js&quot;&gt;&lt;/script&gt;</code></td>
+</tr>
+<tr>
+<td>图像</td>
+<td><code>&lt;A HREF=&quot;http://www.somesite.com&quot;&gt;&lt;IMG SRC=&quot;http://www.example.com/logo.jpg&quot; alt=&quot;Logo&quot;&gt;&lt;/a&gt;</code></td>
+<td><code>&lt;A HREF=&quot;https://www.somesite.com&quot;&gt;&lt;IMG SRC=&quot;https://www.example.com/logo.jpg&quot; alt=&quot;Logo&quot;&gt;&lt;/a&gt;</code></td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/17/securing-your-github-pages-site-with-https/" data-id="ckcr443tc0000w03d092d05gm" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/17/hello-world/" class="article-date">
+  <time datetime="2020-07-18T03:06:18.320Z" itemprop="datePublished">2020-07-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/17/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/17/hello-world/" data-id="ckcr2luyq0000o83ddt5ifw96" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/07/17/securing-your-github-pages-site-with-https/">使用 HTTPS 保护 GitHub Pages 站点</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/17/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
